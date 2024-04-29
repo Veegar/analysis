@@ -81,7 +81,7 @@ def start_analyzer():
     thread.daemon = True
     thread.start()
 
-@app.route('/index')
+@app.route('/')
 def index():
     return render_template('analysis.html', total_students=app.total_students)
 
