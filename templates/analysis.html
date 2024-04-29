@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphs</title>
+    <style>
+        .card {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Total number of students in the school:</h2>
+        <p>{{ total_students }}</p>
+    </div>
+
+    <div class="card">
+        <h2>Distribution of Genders:</h2>
+        <img src="{{ url_for('get_graph', graph_name='gender_pie_chart.png') }}" alt="Gender Pie Chart">
+    </div>
+
+    <div class="card">
+        <h2>Number of Students from Form 1 - 4:</h2>
+        <img src="{{ url_for('get_graph', graph_name='form_bar_chart.png') }}" alt="Form Bar Chart">
+    </div>
+
+    <div class="card">
+        <h2>Age Distribution of Students:</h2>
+        <img src="{{ url_for('get_graph', graph_name='age_histogram.png') }}" alt="Age Histogram">
+    </div>
+</body>
+</html>
